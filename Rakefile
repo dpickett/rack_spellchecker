@@ -50,6 +50,9 @@ RoodiTask.new do |t|
   t.verbose = false
 end
 
+require 'cucumber/rake/task'
+Cucumber::Rake::Task.new(:cucumber)
+
 task :default => :spec
 
 require 'yard'

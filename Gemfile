@@ -3,6 +3,9 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
+gem "raspell"
+gem "rack"
+
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
@@ -13,4 +16,6 @@ group :development do
   gem "rcov", ">= 0"
   gem "reek", "~> 1.2.8"
   gem "roodi", "~> 2.1.0"
+  gem "cucumber", ">= 0"
+  gem "capybara"
 end
