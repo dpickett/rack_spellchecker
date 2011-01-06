@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/rack_spellchecker.rb",
     "lib/rack_spellchecker/application.rb",
     "lib/rack_spellchecker/request_handler.rb",
+    "rack_spellchecker.gemspec",
     "spec/rack_spellchecker_spec.rb",
     "spec/spec_helper.rb"
   ]
