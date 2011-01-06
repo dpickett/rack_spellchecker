@@ -11,7 +11,7 @@ To use in your Rails app:
 * Install/Configure TinyMCE
 * Mount the rack application to TinyMCE's prescribed location (you can configure it via the spellchecker_rpc_url option in tiny_mce) in counfig/routes.rb:
 
-  match "/spell_checker" => RackSpellChecker::Application.new
+    match "/spell_checker" => RackSpellChecker::Application.new
   
 == Todo
 
