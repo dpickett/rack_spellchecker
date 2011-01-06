@@ -9,6 +9,10 @@ Uses ASpell to check text entry and suggest replacement words
 To use in your Rails app:
 
 * Install/Configure TinyMCE
+* Add rack_spellchecker to your Gemfile:
+
+    gem "rack_spellchecker"
+    
 * Mount the rack application to TinyMCE's prescribed location (you can configure it via the spellchecker_rpc_url option in tiny_mce) in counfig/routes.rb:
 
     match "/spell_checker" => RackSpellChecker::Application.new
