@@ -1,5 +1,9 @@
 module RackSpellChecker
+  #Handles incoming requests from the rack application
+  #TinyMCE issues two types of requests: checking for errors and suggesting replacements
   class RequestHandler
+    #dispatches the request to a spelling check or alternative suggestion
+    #if TinyMCE supplied the method "getSuggestions" it will perform the spelling check
     def self.process(req)
       if req["method"] == "getSuggestions"
         suggest_alternatives_for(req["params"][1], req["id"])
@@ -8,6 +12,7 @@ module RackSpellChecker
       end
     end
 
+    #checks the content for mispelled words
     def self.check(content)
       bad_words = []
       content.each do |word| 
@@ -23,6 +28,7 @@ module RackSpellChecker
       }
     end
 
+    #suggests alternatives for a mispelled word
     def self.suggest_alternatives_for(word, position_id)
       {
         "id"     => position_id,
@@ -31,7 +37,7 @@ module RackSpellChecker
       }
     end
     
-    def self.spelling_utility
+    def self.spelling_utility #nodoc
       Aspell.new("en")
     end
   end

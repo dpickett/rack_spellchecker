@@ -1,6 +1,22 @@
 = rack_spellchecker
 
-Description goes here.
+A rack app to support TinyMCE spellchecking functionality (https://github.com/tinymce/tinymce_spellchecker_php)
+
+Uses ASpell to check text entry and suggest replacement words
+
+== Installation
+
+To use in your Rails app:
+
+* Install/Configure TinyMCE
+* Mount the rack application to TinyMCE's prescribed location (you can configure it via the spellchecker_rpc_url option in tiny_mce) in counfig/routes.rb:
+
+  match "/spell_checker" => RackSpellChecker::Application.new
+  
+== Todo
+
+* Different/multiple language support
+* route wrapper for easy introduction to a rails app
 
 == Contributing to rack_spellchecker
  
