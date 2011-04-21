@@ -3,7 +3,8 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem "raspell"
+#gem "raspell"
+gem "dmarkow-raspell"
 gem "rack"
 
 # Add dependencies to develop your gem here.

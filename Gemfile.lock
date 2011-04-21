@@ -22,6 +22,7 @@ GEM
       term-ansicolor (~> 1.0.5)
     culerity (0.2.13)
     diff-lcs (1.1.2)
+    dmarkow-raspell (1.2.2)
     ffi (0.6.3)
       rake (>= 0.8.7)
     gherkin (2.2.9)
@@ -40,7 +41,6 @@ GEM
     rack-test (0.5.6)
       rack (>= 1.0)
     rake (0.8.7)
-    raspell (1.1)
     rcov (0.9.9)
     reek (1.2.8)
       ruby2ruby (~> 1.2)
@@ -80,9 +80,9 @@ DEPENDENCIES
   bundler (~> 1.0.0)
   capybara
   cucumber
+  dmarkow-raspell
   jeweler (~> 1.5.2)
   rack
-  raspell
   rcov
   reek (~> 1.2.8)
   roodi (~> 2.1.0)
