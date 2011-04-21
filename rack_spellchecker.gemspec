@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rack_spellchecker}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Pickett"]
-  s.date = %q{2011-01-06}
+  s.date = %q{2011-04-21}
   s.description = %q{Spellcheck your text entry with TinyMCE and Rack SpellChecker}
   s.email = %q{dpickett@enlightsolutions.com}
   s.extra_rdoc_files = [
@@ -35,25 +35,22 @@ Gem::Specification.new do |s|
     "lib/rack_spellchecker/application.rb",
     "lib/rack_spellchecker/request_handler.rb",
     "rack_spellchecker.gemspec",
-    "spec/rack_spellchecker_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/dpickett/rack_spellchecker}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.7.2}
   s.summary = %q{A rack spellchecker to support TinyMCE spellchecking}
   s.test_files = [
-    "spec/rack_spellchecker_spec.rb",
     "spec/spec_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<raspell>, [">= 0"])
+      s.add_runtime_dependency(%q<dmarkow-raspell>, [">= 0"])
       s.add_runtime_dependency(%q<rack>, [">= 0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<yard>, ["~> 0.6.0"])
@@ -65,7 +62,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<cucumber>, [">= 0"])
       s.add_development_dependency(%q<capybara>, [">= 0"])
     else
-      s.add_dependency(%q<raspell>, [">= 0"])
+      s.add_dependency(%q<dmarkow-raspell>, [">= 0"])
       s.add_dependency(%q<rack>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
@@ -78,7 +75,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<capybara>, [">= 0"])
     end
   else
-    s.add_dependency(%q<raspell>, [">= 0"])
+    s.add_dependency(%q<dmarkow-raspell>, [">= 0"])
     s.add_dependency(%q<rack>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
